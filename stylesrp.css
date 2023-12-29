@@ -1,0 +1,229 @@
+@keyframes animatedGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Global Styles */
+body, button, input, textarea {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, rgba(255, 175, 189, 1) 0%, rgba(255, 195, 160, 1) 20%, rgba(255, 253, 232, 1) 50%, rgba(226, 239, 248, 1) 75%, rgba(215, 227, 244, 1) 100%);
+  background-size: 200% 200%;
+  animation: animatedGradient 30s ease infinite;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Top Navigation Bar */
+.top-bar {
+    display: flex;
+    align-items: center; /* Vertically center items in the navbar */
+    justify-content: space-between; /* Push logo to the left and nav to the right */
+    padding: 10px 20px;
+    background-color: transparent;
+  }
+  
+  .logo-link {
+    display: inline-block;
+    flex-shrink: 0; /* Prevent the logo from shrinking */
+  }
+  
+  .logo {
+    height: 120px; /* Increase height as desired */
+    width: auto; /* Maintain the aspect ratio */
+    max-height: 100%; /* Ensure it doesn't overflow its container */
+  }
+  
+  .navigation {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #333;
+    margin-left: 15px;
+    padding: 5px;
+    border-bottom: 1px solid transparent;
+  }
+  
+  .nav-link:hover {
+    border-bottom: 1px solid #333;
+  }
+  
+  @media (max-width: 768px) {
+    .logo {
+      height: 60px; /* Smaller logo on mobile */
+    }
+  
+    .nav-link {
+  
+      font-size: 0.8em;
+    }
+  }
+/* Dropdown Button */
+.dropbtn {
+  background-color: transparent; /* Makes the button transparent */
+  color: #333; /* Match this to the color of other nav links */
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  outline: none; /* Removes the highlight */
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block; /* Needed for proper positioning of dropdown content */
+}
+
+/* Dropdown Content (Hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9; /* Light background, you can change this */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black; /* Color of dropdown links */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block; /* Dropdown link styles */
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd; /* Light grey background on hover */
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #f1f1f1; /* Light grey background, you can change this */
+}
+/* Main Content Styles */
+.case-study-main {
+  padding: 50px;
+  text-align: center;
+}
+
+/* Introduction Section */
+.case-study-intro h1 {
+  font-size: 3em;
+  color: #000000; /* Standout color against the background */
+  margin-bottom: 20px;
+}
+
+/* Image Style */
+.case-study-image {
+  width: 100%;
+  max-width: 600px;
+  margin: auto; /* Center the image */
+}
+
+/* Main Content Layout */
+.case-study-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 50px;
+  flex-wrap: wrap; /* Wraps items for responsiveness */
+}
+
+.case-study-details, .case-study-description {
+  flex-basis: 45%; /* Takes up 45% of the flex container */
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px; /* Added margin for spacing */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .case-study-details, .case-study-description {
+    flex-basis: 100%; /* Stacks them on top of each other on small screens */
+    margin-bottom: 20px; /* Space between stacked items */
+  }
+}
+
+/* Section Styles */
+.case-study-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 50px;
+  background-color: #fff;
+  color: #333;
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
+.case-study-left, .case-study-right {
+  flex-basis: 48%; /* Takes up 48% of the flex container */
+}
+
+.case-study-left h2 {
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+}
+
+/*List Styles */
+.custom-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.custom-list li {
+  position: relative;
+  padding-left: 20px; /* Adjust this value based on your design */
+  margin-bottom: 10px; /* Space between items */
+}
+
+.custom-list li strong {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px; /* Space between the bold title and the description text */
+}
+
+/* Embeds Styles */
+.twitter-embed, .instagram-embed {
+  border: 1px solid #e1e8ed;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px; /* Space between embeds */
+}
+
+/* Results Section Styles */
+.results-section .social-embeds-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* Wraps embeds for responsiveness */
+}
+
+.results-section .twitter-embed, 
+.results-section .instagram-embed {
+  flex: 1; /* Distributes space equally */
+  max-width: calc(50% - 10px); /* Accounts for the gap */
+}
+
+@media (max-width: 768px) {
+  .results-section .social-embeds-container {
+    flex-direction: column;
+  }
+
+  .results-section .twitter-embed, 
+  .results-section .instagram-embed {
+    max-width: 100%; /* Full width on smaller screens */
+  }
+}
